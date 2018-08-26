@@ -2,7 +2,7 @@ package controllers
 import (
 	"net/http"
 	"strconv"
-	_ "orzinfo.com/go-study/models"
+	m "orzinfo.com/go-study/models"
 	"github.com/gin-gonic/gin"
 )
 //查询Byid
@@ -16,7 +16,7 @@ func GetArticle(c *gin.Context) {
 			"success": false, "msg": "格式错误",
 		})
 	} else {
-		article := GetArticleById(id)
+		article := m.GetArticleById(id)
 		//居然没有三元
 		if article == nil{
 			c.JSON(http.StatusOK, gin.H{

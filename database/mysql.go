@@ -7,7 +7,7 @@ import (
 var Orm *xorm.Engine
 func init() {
 	var err error
-	Orm, err = xorm.NewEngine("mysql", "root:123456@tcp(127.0.0.1:3306)/test?charset=utf8")
+	Orm, err = xorm.NewEngine("mysql", "root:root@tcp(127.0.0.1:3306)/test?charset=utf8")
 	Orm.ShowSQL(true)
 	if err != nil {
 		log.Fatal(err.Error())
