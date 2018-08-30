@@ -6,6 +6,6 @@ import (
 func InitRouter() *gin.Engine{
 	router := gin.Default()
 	router.GET("/article/:id", a.GetArticle)
-	router.LoadHTMLGlob("view/*")
+	//	router.LoadHTMLGlob("view/*")
 	return router
 }
